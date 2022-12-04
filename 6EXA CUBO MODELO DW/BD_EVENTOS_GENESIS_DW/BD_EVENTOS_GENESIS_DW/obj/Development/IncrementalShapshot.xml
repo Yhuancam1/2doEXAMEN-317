@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>BD_EVENTOS_GENESIS_DW</Database>
+    <Server>DESKTOP-KGO4N3K\SQLSERVER</Server>
+    <ConnectionString>DataSource=DESKTOP-KGO4N3K\SQLSERVER;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>+adwrb5kZDRwjkmtfHpO4BAxg7I=04/12/2022 10:00:4604/12/2022 10:00:46</TimeStamp>
+        <ID>
+          <String>EVENTOS GENESIS ETL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>M/gMuVmkNdWs6Wsce7uSmfWfiSw=04/12/2022 10:01:0904/12/2022 10:01:09</TimeStamp>
+        <ID>
+          <String>EVENTOS GENESIS ETL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>iPKXSGsRw8XI4bSzKTA8aVWPXuI=04/12/2022 10:02:4804/12/2022 10:01:32</TimeStamp>
+        <ID>
+          <String>Dim Cliente</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>79yjCYe2fcgK2aw3MxYrbs2sT30=04/12/2022 10:04:1504/12/2022 10:01:32</TimeStamp>
+        <ID>
+          <String>Dim Encargado</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7eclMwkLAbtyc3tYQ5hMyqIiYto=04/12/2022 10:04:4704/12/2022 10:01:32</TimeStamp>
+        <ID>
+          <String>Dim Evento</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>leyHsy1HQubO9zSmttrur5vgCB4=04/12/2022 10:01:3204/12/2022 10:01:32</TimeStamp>
+        <ID>
+          <String>Dim Tiempo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>d/hGJxhs9dExnAHdIDcxRiVlc5w=04/12/2022 10:05:0604/12/2022 10:01:32</TimeStamp>
+        <ID>
+          <String>Dim Ubicacion</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>JO9Xn2eoO2vhQin9AqAzblfYx9I=04/12/2022 10:05:0604/12/2022 10:01:329UFiNe6tsflHj0fVzQZlkZv02fw=04/12/2022 10:01:3204/12/2022 10:01:32</TimeStamp>
+        <ID>
+          <String>EVENTOS GENESIS ETL</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>p5sgDalEeDyCmancA9vgTAccpxE=04/12/2022 10:00:0904/12/2022 10:00:09</TimeStamp>
+      <ID>
+        <String>BD_EVENTOS_GENESIS_DW</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-12-04T14:05:08.266667Z</LastDeployed>
+</DeploymentSnapshot>

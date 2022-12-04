@@ -1,0 +1,2591 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="DESKTOP-KGO4N3K\HP"
+  DTS:CreatorComputerName="DESKTOP-KGO4N3K"
+  DTS:CreationDate="12/3/2022 12:46:09 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{92557948-1E19-471C-8164-22C290985600}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{C90564B9-F424-4CE7-BD6C-4A4A877AFE1F}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+      DTS:ObjectName="(local).EVENTOS_GENESIS_ETL.Huanca_INF-317"
+      DTS:DTSID="{71F9DB71-7831-46AE-84CE-6DAB4E503DB5}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);User ID=Huanca_INF-317;Initial Catalog=EVENTOS_GENESIS_ETL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAH+OC1x0sWEy/CsEcVv293gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB4P2FoTK3BU8unWhWcixaKfAuL0+XHD6H/jmnvNjB8TwAAAAAOgAAAAAIAACAAAAAMy+Vxdaq1MB5F8cnR4kvPOGVRGNQQCfmaUW9CyU7CaBAAAABHYcoYpU6Qtwbz3MciCXpRQAAAAF5+1PtdhsbT14rbwWOXVuEJ1wvmpt4TFtqishzH/x3Ne2uK/b9T3SbSByX1TukUMa4F5DwxKdHMQDm2I8f7vdc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Flujo de Datos ETL - DW"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Flujo de Datos ETL - DW"
+      DTS:DTSID="{899FCBBD-B42F-4671-94E1-C2760DC07829}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente"
+              name="Destino Dim_Cliente"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Dim_Cliente]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].Columns[Nom_Cliente]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Cliente]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Cliente]"
+                      cachedName="Nom_Cliente"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].Columns[CI]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CI]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CI]"
+                      cachedName="CI"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].Columns[Cod_Distrito]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      cachedName="Cod_Distrito"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].Columns[Nom_Distrito]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Distrito]"
+                      cachedName="Nom_Distrito"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].Columns[Cod_Cliente]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Cod_Cliente]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Cliente]"
+                      cachedName="Cod_Cliente"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Cliente]"
+                      name="ID_Cliente"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CI]"
+                      name="CI"
+                      dataType="str"
+                      length="9"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB].ExternalColumns[Key_Cliente]"
+                      name="Key_Cliente"
+                      dataType="i4" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado"
+              name="Destino Dim_Encargado"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Dim_Encargado]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].Columns[Nom_Encargado]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Encargado]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Encargado]"
+                      cachedName="Nom_Encargado"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].Columns[Cod_Distrito]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      cachedName="Cod_Distrito"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].Columns[Nom_Distrito]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Distrito]"
+                      cachedName="Nom_Distrito"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].Columns[Cod_Encargado]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Cod_Encargado]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Encargado]"
+                      cachedName="Cod_Encargado"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Encargado]"
+                      name="ID_Encargado"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Encargado]"
+                      name="Nom_Encargado"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Key_Encargado]"
+                      name="Key_Encargado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento"
+              name="Destino Dim_Evento"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Dim_Evento]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].Columns[Cod_Cliente]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Cod_Cliente]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Cliente]"
+                      cachedName="Cod_Cliente"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].Columns[Nom_Cliente]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_Cliente]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Cliente]"
+                      cachedName="Nom_Cliente"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].Columns[costo_evento]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[costo_evento]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Costo_Evento]"
+                      cachedName="costo_evento"
+                      cachedDataType="cy" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].Columns[Cod_Evento]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Cod_Evento]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Evento]"
+                      cachedName="Cod_Evento"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].Columns[Nom_TipoEvento]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_TipoEvento]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo_Evento]"
+                      cachedName="Nom_TipoEvento"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].Columns[Nom_Tematica]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_Tematica]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tematica]"
+                      cachedName="Nom_Tematica"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Evento]"
+                      name="ID_Evento"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo_Evento]"
+                      name="Tipo_Evento"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Costo_Evento]"
+                      name="Costo_Evento"
+                      dataType="cy" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Key_Evento]"
+                      name="Key_Evento"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tematica]"
+                      name="Tematica"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo"
+              name="Destino Dim_Tiempo"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Dim_Tiempo]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[Año]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Año]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Año]"
+                      cachedName="Año"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[Trimestre]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Trimestre]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Trimestre]"
+                      cachedName="Trimestre"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[NomMes]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[NomMes]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[NomMes]"
+                      cachedName="NomMes"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[Dia]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Dia]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Dia]"
+                      cachedName="Dia"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[DiaSemana]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[DiaSemana]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[DiaSem]"
+                      cachedName="DiaSemana"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[NomDiaSemana]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[NomDiaSemana]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[NomDiaSem]"
+                      cachedName="NomDiaSemana"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[Fecha_cita]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Fecha_cita]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      cachedName="Fecha_cita"
+                      cachedDataType="dbDate" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].Columns[codigofecha]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[codigofecha]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Id_Fecha]"
+                      cachedName="codigofecha"
+                      cachedDataType="i4" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Id_Fecha]"
+                      name="Id_Fecha"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      name="Fecha"
+                      dataType="dbDate" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Año]"
+                      name="Año"
+                      dataType="i2" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Trimestre]"
+                      name="Trimestre"
+                      dataType="ui1" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[NomMes]"
+                      name="NomMes"
+                      dataType="str"
+                      length="15"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[Dia]"
+                      name="Dia"
+                      dataType="ui1" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[DiaSem]"
+                      name="DiaSem"
+                      dataType="ui1" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB].ExternalColumns[NomDiaSem]"
+                      name="NomDiaSem"
+                      dataType="str"
+                      length="15"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion"
+              name="Destino Dim_Ubicacion"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Dim_Ubicacion]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].Columns[Cod_Distrito]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      cachedName="Cod_Distrito"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].Columns[Nom_Distrito]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Distrito]"
+                      cachedName="Nom_Distrito"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].Columns[Cod_Departamento]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Departamento]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Departamento]"
+                      cachedName="Cod_Departamento"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].Columns[Cod_Provincia]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Provincia]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Provincia]"
+                      cachedName="Cod_Provincia"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].Columns[Nom_Deparatamento]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Deparatamento]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Depart]"
+                      cachedName="Nom_Deparatamento"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].Columns[Nom_Provincia]"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Provincia]"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Provinci]"
+                      cachedName="Nom_Provincia"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Ubi]"
+                      name="Cod_Ubi"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Departamento]"
+                      name="Cod_Departamento"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Depart]"
+                      name="Nom_Depart"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Provincia]"
+                      name="Cod_Provincia"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Provinci]"
+                      name="Nom_Provinci"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB"
+              name="Origen de OLE DB"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="Origen de OLE DB"
+              usesDispositions="true"
+              version="7"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Cliente.Cod_Cliente, Cliente.Nom_Cliente, Cliente.CI, Distrito.Cod_Distrito, Distrito.Nom_Distrito
+FROM            Distrito INNER JOIN
+                         Cliente ON Distrito.Cod_Distrito = Cliente.Cod_Distrito INNER JOIN
+                         Citas ON Cliente.Cod_Cliente = Citas.Cod_Cliente</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Cod_Cliente]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Cliente]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Cliente]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Cliente]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CI]"
+                      name="CI"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CI]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[CI]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Distrito]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Distrito]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[CI]"
+                      name="CI"
+                      dataType="str"
+                      length="9"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  name="Salida de error de origen de OLE DB"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Cliente]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Cliente]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[CI]"
+                      name="CI"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[CI]"
+                      length="9"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Distrito]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1"
+              name="Origen de OLE DB 1"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="Origen de OLE DB"
+              usesDispositions="true"
+              version="7"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Encargado.Cod_Encargado, Encargado.Nom_Encargado, Distrito.Cod_Distrito, Distrito.Nom_Distrito
+FROM            Encargado INNER JOIN
+                         Distrito ON Encargado.Cod_Distrito = Distrito.Cod_Distrito</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Cod_Encargado]"
+                      name="Cod_Encargado"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Cod_Encargado]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Encargado]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Encargado]"
+                      name="Nom_Encargado"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Encargado]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Encargado]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Distrito]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Distrito]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Encargado]"
+                      name="Cod_Encargado"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Encargado]"
+                      name="Nom_Encargado"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB]"
+                  name="Salida de error de origen de OLE DB"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Encargado]"
+                      name="Cod_Encargado"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Encargado]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Encargado]"
+                      name="Nom_Encargado"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Encargado]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Distrito]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2"
+              name="Origen de OLE DB 2"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="Origen de OLE DB"
+              usesDispositions="true"
+              version="7"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Cliente.Cod_Cliente, Cliente.Nom_Cliente, Tematicas.Nom_Tematica, Tipos_Evento.Nom_TipoEvento, evento.Cod_Evento, evento.costo_evento
+FROM            Tipos_Evento INNER JOIN
+                         evento ON Tipos_Evento.Cod_TipoEvento = evento.Cod_TipoEvento INNER JOIN
+                         Tematicas ON evento.Cod_Tematicas = Tematicas.Cod_Tematicas INNER JOIN
+                         Cliente ON evento.Cod_Cliente = Cliente.Cod_Cliente</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Cod_Cliente]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Cliente]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_Cliente]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Cliente]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Cod_Evento]"
+                      name="Cod_Evento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Cod_Evento]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Evento]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_TipoEvento]"
+                      name="Nom_TipoEvento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_TipoEvento]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_TipoEvento]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_Tematica]"
+                      name="Nom_Tematica"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[Nom_Tematica]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Tematica]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[costo_evento]"
+                      name="costo_evento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].Columns[costo_evento]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[costo_evento]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Evento]"
+                      name="Cod_Evento"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_TipoEvento]"
+                      name="Nom_TipoEvento"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Tematica]"
+                      name="Nom_Tematica"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB].ExternalColumns[costo_evento]"
+                      name="costo_evento"
+                      dataType="cy" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB]"
+                  name="Salida de error de origen de OLE DB"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Cliente]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Cliente]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Evento]"
+                      name="Cod_Evento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Evento]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Nom_TipoEvento]"
+                      name="Nom_TipoEvento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Nom_TipoEvento]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Tematica]"
+                      name="Nom_Tematica"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Tematica]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[costo_evento]"
+                      name="costo_evento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[costo_evento]"
+                      dataType="cy" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3"
+              name="Origen de OLE DB 3"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="Origen de OLE DB"
+              usesDispositions="true"
+              version="7"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT        Distrito.Cod_Distrito, Distrito.Nom_Distrito, Departamento.Cod_Departamento, Departamento.Nom_Deparatamento, Provincia.Cod_Provincia, Provincia.Nom_Provincia
+FROM            Distrito INNER JOIN
+                         Provincia ON Distrito.Cod_Provincia = Provincia.Cod_Provincia INNER JOIN
+                         Departamento ON Provincia.Cod_Departamento = Departamento.Cod_Departamento</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Distrito]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Distrito]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Distrito]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Departamento]"
+                      name="Cod_Departamento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Departamento]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Departamento]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Deparatamento]"
+                      name="Nom_Deparatamento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Deparatamento]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Deparatamento]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Provincia]"
+                      name="Cod_Provincia"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Cod_Provincia]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Provincia]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Provincia]"
+                      name="Nom_Provincia"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].Columns[Nom_Provincia]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Provincia]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Departamento]"
+                      name="Cod_Departamento"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Deparatamento]"
+                      name="Nom_Deparatamento"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Cod_Provincia]"
+                      name="Cod_Provincia"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Provincia]"
+                      name="Nom_Provincia"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB]"
+                  name="Salida de error de origen de OLE DB"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Distrito]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Distrito]"
+                      name="Nom_Distrito"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Departamento]"
+                      name="Cod_Departamento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Departamento]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Deparatamento]"
+                      name="Nom_Deparatamento"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Deparatamento]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Provincia]"
+                      name="Cod_Provincia"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Cod_Provincia]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Provincia]"
+                      name="Nom_Provincia"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Provincia]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4"
+              name="Origen de OLE DB 4"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="Origen de OLE DB"
+              usesDispositions="true"
+              version="7"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT
+YEAR(Fecha_cita) * 1000 + MONTH(Fecha_cita) *  100 + DAY(Fecha_cita) AS codigofecha,
+Fecha_cita, YEAR(Fecha_cita) as Año,
+DATEPART(QUARTER,Fecha_cita) AS Trimestre,
+ MONTH(Fecha_cita) AS Mes, dbo.fn_mes(MONTH(Fecha_cita)) AS NomMes,
+DAY(Fecha_cita) AS Dia,
+DATEPART(WEEKDAY,Fecha_cita) AS DiaSemana,
+dbo.fn_diaSem(DATEPART (WEEKDAY, Fecha_cita)) AS NomDiaSemana
+From dbo.Citas</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[codigofecha]"
+                      name="codigofecha"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[codigofecha]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[codigofecha]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Fecha_cita]"
+                      name="Fecha_cita"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Fecha_cita]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha_cita]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Año]"
+                      name="Año"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Año]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Año]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Trimestre]"
+                      name="Trimestre"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Trimestre]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Trimestre]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Mes]"
+                      name="Mes"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Mes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Mes]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[NomMes]"
+                      name="NomMes"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[NomMes]"
+                      length="15"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[NomMes]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Dia]"
+                      name="Dia"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[Dia]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Dia]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[DiaSemana]"
+                      name="DiaSemana"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[DiaSemana]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[DiaSemana]" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[NomDiaSemana]"
+                      name="NomDiaSemana"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].Columns[NomDiaSemana]"
+                      length="15"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[NomDiaSemana]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[codigofecha]"
+                      name="codigofecha"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha_cita]"
+                      name="Fecha_cita"
+                      dataType="dbDate" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Año]"
+                      name="Año"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Trimestre]"
+                      name="Trimestre"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Mes]"
+                      name="Mes"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[NomMes]"
+                      name="NomMes"
+                      dataType="str"
+                      length="15"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[Dia]"
+                      name="Dia"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[DiaSemana]"
+                      name="DiaSemana"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB].ExternalColumns[NomDiaSemana]"
+                      name="NomDiaSemana"
+                      dataType="str"
+                      length="15"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB]"
+                  name="Salida de error de origen de OLE DB"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[codigofecha]"
+                      name="codigofecha"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[codigofecha]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Fecha_cita]"
+                      name="Fecha_cita"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Fecha_cita]"
+                      dataType="dbDate" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Año]"
+                      name="Año"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Año]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Trimestre]"
+                      name="Trimestre"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Trimestre]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Mes]"
+                      name="Mes"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Mes]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[NomMes]"
+                      name="NomMes"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[NomMes]"
+                      length="15"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Dia]"
+                      name="Dia"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[Dia]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[DiaSemana]"
+                      name="DiaSemana"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[DiaSemana]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[NomDiaSemana]"
+                      name="NomDiaSemana"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[NomDiaSemana]"
+                      length="15"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB3]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Flujo de Datos ETL - DW\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+              endId="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente.Inputs[Entrada de destino de OLE DB]" />
+            <path
+              refId="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB4]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB]"
+              endId="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado.Inputs[Entrada de destino de OLE DB]" />
+            <path
+              refId="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2.Outputs[Salida de origen de OLE DB]"
+              endId="Package\Flujo de Datos ETL - DW\Destino Dim_Evento.Inputs[Entrada de destino de OLE DB]" />
+            <path
+              refId="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3.Outputs[Salida de origen de OLE DB]"
+              endId="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion.Inputs[Entrada de destino de OLE DB]" />
+            <path
+              refId="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB1]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4.Outputs[Salida de origen de OLE DB]"
+              endId="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo.Inputs[Entrada de destino de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar Limpieza"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar Limpieza"
+      DTS:DTSID="{E301B36B-7368-4FEE-ABB8-93AC861E1239}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{71F9DB71-7831-46AE-84CE-6DAB4E503DB5}"
+          SQLTask:SqlStatementSource="DELETE Dim_Tiempo&#xA;DELETE Dim_Cliente&#xA;DELETE Dim_Evento&#xA;DELETE Dim_Encargado&#xA;DELETE Dim_Ubicacion&#xA;TRUNCATE TABLE Hechos_Fact_Precio_Evento" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:DTSID="{6500B750-80FE-44D3-85F5-D678960D75C7}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{71F9DB71-7831-46AE-84CE-6DAB4E503DB5}"
+          SQLTask:SqlStatementSource="EXECUTE UMSA_Carga_Fact_Precio" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 1"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 1"
+      DTS:DTSID="{668BC417-8615-47DD-898F-36A336B14BC8}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{71F9DB71-7831-46AE-84CE-6DAB4E503DB5}"
+          SQLTask:SqlStatementSource="DELETE Hechos_Fact_Precio_Evento" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:From="Package\Tarea Ejecutar Limpieza"
+      DTS:To="Package\Flujo de Datos ETL - DW"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:DTSID="{13EF36A2-70C1-46D3-BF5D-6489B09DF20B}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:From="Package\Tarea Ejecutar SQL 1"
+      DTS:To="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:DTSID="{A6FFD6FD-1C88-4CF6-8D0D-1DC5E12FB407}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:From="Package\Flujo de Datos ETL - DW"
+      DTS:To="Package\Tarea Ejecutar SQL 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:DTSID="{57647303-D64F-4CF5-88D1-9FFB185F8D0C}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="sql11">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Flujo de Datos ETL - DW"
+          TopLeft="366,154" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar Limpieza"
+          TopLeft="364,49" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="361,373" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Tarea Ejecutar SQL 1"
+          TopLeft="362,263" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="461.25,91">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="448.25,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="463,196">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,67"
+              Start="0,0"
+              End="-12,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="-4,33.5" />
+                  <mssgle:LineSegment
+                    End="-8,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,33.5"
+                    Point2="-12,33.5"
+                    Point3="-12,37.5" />
+                  <mssgle:LineSegment
+                    End="-12,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Flujo de Datos ETL - DW">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo"
+          TopLeft="339,344" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado"
+          TopLeft="250,175" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion"
+          TopLeft="741,167" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4"
+          TopLeft="342,245" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3"
+          TopLeft="737,69" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Flujo de Datos ETL - DW\Origen de OLE DB"
+          TopLeft="36,68" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2"
+          TopLeft="495,70" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1"
+          TopLeft="257,70" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Flujo de Datos ETL - DW\Destino Dim_Evento"
+          TopLeft="489,170" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente"
+          TopLeft="35,170" />
+        <EdgeLayout
+          Id="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB1]"
+          TopLeft="427.5,287">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB]"
+          TopLeft="823,111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,56"
+              Start="0,0"
+              End="11,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
+                  <mssgle:LineSegment
+                    End="7,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,28"
+                    Point2="11,28"
+                    Point3="11,32" />
+                  <mssgle:LineSegment
+                    End="11,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB2]"
+          TopLeft="578.25,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB4]"
+          TopLeft="344.25,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flujo de Datos ETL - DW.Paths[Salida de origen de OLE DB3]"
+          TopLeft="119.5,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Destino Dim_Tiempo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Destino Dim_Encargado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Destino Dim_Ubicacion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Origen de OLE DB 4">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Origen de OLE DB 3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Origen de OLE DB 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Origen de OLE DB 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Destino Dim_Evento">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flujo de Datos ETL - DW\Destino Dim_Cliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

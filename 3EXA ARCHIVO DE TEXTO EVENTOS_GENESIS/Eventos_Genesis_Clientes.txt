@@ -1,0 +1,7 @@
+Cod_Cliente, Nom_Cliente, CI, Telefono, Direccion, Correo, Cod_Departamento, Cod_Provincia, Cod_Distrito
+CL21, Aron Suares Quispe, 9991234, 75011098, Calle Suarez Vito #011, Usuario21@gmail.com, D01, PR01,DI01
+CL22, Arai Mariano Quispe, 9191234, 75021098, Calle Mendieta Vito #012, Usuario22@gmail.com, D02, PR02,DI02
+CL23, Angeles Sanchez Quispe, 9181234, 75031098, Calle Sanchez Vito #013, Usuario23@gmail.com, D03, PR03,DI03
+CL24, Carlos Suxo Quispe, 9171234, 75041098, Calle Suarez Sur #014, Usuario24@gmail.com, D04, PR04,DI04
+CL25, Mario Paredes Quispe, 9161234, 75611098, Calle Equipetrol #015, Usuario25@gmail.com, D05, PR05,DI05
+CL26, Daniel Suares Peredo, 9151234, 71211098, Calle Petroleraa #016, Usuario26@gmail.com, D06, PR06,DI06

@@ -1,0 +1,972 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="DESKTOP-KGO4N3K\HP"
+  DTS:CreatorComputerName="DESKTOP-KGO4N3K"
+  DTS:CreationDate="12/3/2022 11:52:30 AM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{EF2A844C-1722-45B3-BF55-BC394859D8DE}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{40E19EA5-B47B-4124-9123-65BEC124713C}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+      DTS:ObjectName="(local).EVENTOS_GENESIS_ETL.Huanca_INF-317"
+      DTS:DTSID="{4490C965-A8D2-484D-814C-37E584AD8FAD}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);User ID=Huanca_INF-317;Initial Catalog=EVENTOS_GENESIS_ETL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAH+OC1x0sWEy/CsEcVv293gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD05QTkDoXoVpQUl2RGcyJ5UF7yTKCwgv7Z4D3Kzmyb5QAAAAAOgAAAAAIAACAAAAC4l/9ID/Dbp8ZPBmQFuoivpTLGvsKU1VzUOdZisDfalhAAAAD8GIIHIpzhAoFHQGoNsW/2QAAAAFOrkErbeZ2/1CqX8XUfnMUewnm9DV7XGixKgpsHICnqTbDLS7CcjjC0iVqHHAk79y/kAmWY8GWfeUfZvPjkrBg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:ObjectName="Administrador de conexiones de archivos planos"
+      DTS:DTSID="{863E0BD8-2DBF-4693-A3A2-CF542F9A05E4}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Desktop\Umsa 2 2022\INF 317\2doPARCIAL\Eventos_Genesis_Clientes.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cod_Cliente"
+              DTS:DTSID="{F786D284-C23F-4AFC-BA06-5A380D808DC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Nom_Cliente"
+              DTS:DTSID="{BBFCE50B-6762-43C4-9838-E3C62B4443DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" CI"
+              DTS:DTSID="{6FC86D60-FEB2-4851-8088-FEE4055E2E7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Telefono"
+              DTS:DTSID="{7B1D02F9-6791-415A-8C3B-5D200977459D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Direccion"
+              DTS:DTSID="{28F8DD91-61CF-46A9-A9C0-D2C55E652512}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Correo"
+              DTS:DTSID="{4BABACF5-18FE-45D9-86B6-7BB2A24D6F73}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Cod_Departamento"
+              DTS:DTSID="{D5A3BACD-B6F5-46EE-913E-39E7AE1CF433}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Cod_Provincia"
+              DTS:DTSID="{A27E39F0-ABD1-4C7D-96C3-7A3F6B1E4DA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Cod_Distrito"
+              DTS:DTSID="{DF8A1ADF-818B-4566-BAD1-522247018A88}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Cargue Archivo Texto"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Cargue Archivo Texto"
+      DTS:DTSID="{88A88F09-66EF-4D7E-A5EE-91500CC6744B}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB"
+              name="Destino de OLE DB"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Cliente]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).EVENTOS_GENESIS_ETL.Huanca_INF-317]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Cod_Cliente]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Cod_Cliente]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Cliente]"
+                      cachedName="Cod_Cliente"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Nom_Cliente]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Nom_Cliente]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Cliente]"
+                      cachedName=" Nom_Cliente"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ CI]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ CI]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CI]"
+                      cachedName=" CI"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Telefono]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Telefono]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Telefono]"
+                      cachedName=" Telefono"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Direccion]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Direccion]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Direccion]"
+                      cachedName=" Direccion"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Correo]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Correo]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Correo]"
+                      cachedName=" Correo"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Cod_Provincia]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Provincia]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Provincia]"
+                      cachedName=" Cod_Provincia"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Cod_Departamento]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Departamento]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Departamento]"
+                      cachedName=" Cod_Departamento"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ Cod_Distrito]"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Distrito]"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      cachedName=" Cod_Distrito"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Cliente]"
+                      name="Nom_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CI]"
+                      name="CI"
+                      dataType="str"
+                      length="9"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Telefono]"
+                      name="Telefono"
+                      dataType="str"
+                      length="20"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Direccion]"
+                      name="Direccion"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Correo]"
+                      name="Correo"
+                      dataType="str"
+                      length="30"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Departamento]"
+                      name="Cod_Departamento"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Provincia]"
+                      name="Cod_Provincia"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod_Distrito]"
+                      name="Cod_Distrito"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano"
+              name="Origen de archivo plano"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Origen de archivo plano"
+              localeId="3082"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL.">false</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[Cod_Cliente]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Cod_Cliente]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Nom_Cliente]"
+                      name=" Nom_Cliente"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Nom_Cliente]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Nom_Cliente]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ CI]"
+                      name=" CI"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ CI]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ CI]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Telefono]"
+                      name=" Telefono"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Telefono]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Telefono]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Direccion]"
+                      name=" Direccion"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Direccion]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Direccion]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Correo]"
+                      name=" Correo"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Correo]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Correo]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Departamento]"
+                      name=" Cod_Departamento"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Departamento]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Cod_Departamento]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Provincia]"
+                      name=" Cod_Provincia"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Provincia]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Cod_Provincia]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Distrito]"
+                      name=" Cod_Distrito"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[ Cod_Distrito]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Cod_Distrito]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[Cod_Cliente]"
+                      name="Cod_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Nom_Cliente]"
+                      name=" Nom_Cliente"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ CI]"
+                      name=" CI"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Telefono]"
+                      name=" Telefono"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Direccion]"
+                      name=" Direccion"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Correo]"
+                      name=" Correo"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Cod_Departamento]"
+                      name=" Cod_Departamento"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Cod_Provincia]"
+                      name=" Cod_Provincia"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[ Cod_Distrito]"
+                      name=" Cod_Distrito"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                  name="Salida de error de origen de archivo plano"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Cargue Archivo Texto.Paths[Salida de origen de archivo plano]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Tarea Cargue Archivo Texto\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+              endId="Package\Tarea Cargue Archivo Texto\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Crear Tablas SQL"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Crear Tablas SQL"
+      DTS:DTSID="{21C81794-2288-4256-8B3A-41526910A5B1}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4490C965-A8D2-484D-814C-37E584AD8FAD}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[Citas](&#xA;&#x9;[Cod_Citas] [char](5) NOT NULL,&#xA;&#x9;[Fecha_cita] [date] NOT NULL,&#xA;&#x9;[Nom_Encargado] [varchar](50) NOT NULL,&#xA;&#x9;[Lugar_atencion] [varchar](50) NOT NULL,&#xA;&#x9;[Nom_Cliente] [varchar](50) NOT NULL,&#xA;&#x9;[Cod_Cliente] [char](5) NOT NULL,&#xA;&#x9;[Cod_Evento] [char](5) NOT NULL,&#xA;&#x9;[Cod_Distrito] [char](5) NOT NULL,&#xA;&#x9;[Cod_Encargado] [char](5) NOT NULL,&#xA;&#x9;[Cod_TipoEvento] [char](5) NOT NULL,&#xA;&#x9;[Cod_Tematicas] [char](5) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Cliente](&#xA;&#x9;[Cod_Cliente] [char](5) NOT NULL,&#xA;&#x9;[Nom_Cliente] [varchar](50) NOT NULL,&#xA;&#x9;[CI] [char](9) NOT NULL,&#xA;&#x9;[Telefono] [varchar](20) NOT NULL,&#xA;&#x9;[Direccion] [varchar](50) NOT NULL,&#xA;&#x9;[Correo] [varchar](30) NOT NULL,&#xA;&#x9;[Cod_Departamento] [char](5) NOT NULL,&#xA;&#x9;[Cod_Provincia] [char](5) NOT NULL,&#xA;&#x9;[Cod_Distrito] [char](5) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Departamento](&#xA;&#x9;[Cod_Departamento] [char](5) NOT NULL,&#xA;&#x9;[Nom_Deparatamento] [varchar](50) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Detalle_Cita](&#xA;&#x9;[Cod_Citas] [char](5) NOT NULL,&#xA;&#x9;[Cod_Evento] [char](5) NOT NULL,&#xA;&#x9;[costo_evento] [money] NOT NULL,&#xA;&#x9;[cantidad] [int] NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Distrito](&#xA;&#x9;[Cod_Distrito] [char](5) NOT NULL,&#xA;&#x9;[Nom_Distrito] [varchar](50) NOT NULL,&#xA;&#x9;[Cod_Provincia] [char](5) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Encargado](&#xA;&#x9;[Cod_Encargado] [char](5) NOT NULL,&#xA;&#x9;[Nom_Encargado] [varchar](50) NOT NULL,&#xA;&#x9;[Horario] [varchar](50) NOT NULL,&#xA;&#x9;[Cod_Departamento] [char](5) NOT NULL,&#xA;&#x9;[Cod_Provincia] [char](5) NOT NULL,&#xA;&#x9;[Cod_Distrito] [char](5) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[evento](&#xA;&#x9;[Cod_Evento] [char](5) NOT NULL,&#xA;&#x9;[Fecha_evento] [date] NOT NULL,&#xA;&#x9;[ubicacion_evento] [varchar](40) NOT NULL,&#xA;&#x9;[costo_evento] [money] NOT NULL,&#xA;&#x9;[tipo_local] [varchar](40) NOT NULL,&#xA;&#x9;[Cod_Cliente] [char](5) NOT NULL,&#xA;&#x9;[Cod_TipoEvento] [char](5) NOT NULL,&#xA;&#x9;[Cod_Tematicas] [char](5) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Provincia](&#xA;&#x9;[Cod_Provincia] [char](5) NOT NULL,&#xA;&#x9;[Nom_Provincia] [varchar](50) NOT NULL,&#xA;&#x9;[Cod_Departamento] [char](5) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Tematicas](&#xA;&#x9;[Cod_Tematicas] [char](5) NOT NULL,&#xA;&#x9;[Nom_Tematica] [varchar](50) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Tipos_Evento](&#xA;&#x9;[Cod_TipoEvento] [char](5) NOT NULL,&#xA;&#x9;[Nom_TipoEvento] [varchar](50) NOT NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar Consulta SQL"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar Consulta SQL"
+      DTS:DTSID="{D776A5B8-427E-4FF5-849F-7CFEB685CCD7}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4490C965-A8D2-484D-814C-37E584AD8FAD}"
+          SQLTask:SqlStatementSource="IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Tipos_Evento]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Tipos_Evento]&#xA;GO&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Tematicas]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Tematicas]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Provincia]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Provincia]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[evento]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[evento]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Encargado]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Encargado]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Distrito]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Distrito]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Detalle_Cita]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Detalle_Cita]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Departamento]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Departamento]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Cliente]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Cliente]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Citas]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[Citas]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Insercion Datos SQL"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Insercion Datos SQL"
+      DTS:DTSID="{B8508A57-7AE3-4ABA-A86E-01DFC20D8843}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4490C965-A8D2-484D-814C-37E584AD8FAD}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT01 ', CAST(N'2021-02-11' AS Date), N'Carla Llanos Paredes', N'Oficina', N'Ronaldo Tito Nogales', N'CL01 ', N'EV01 ', N'DI01 ', N'EC01 ', N'TE01 ', N'T05  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT02 ', CAST(N'2021-03-12' AS Date), N'Carla Llanos Paredes', N'Cafeteria', N'Griselda Valdez Choque', N'CL02 ', N'EV01 ', N'DI01 ', N'EC01 ', N'TE02 ', N'T04  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT03 ', CAST(N'2021-03-13' AS Date), N'Elizabet Bustillo Torres', N'Restaurante', N'Jaquelin Velazquez Aroni', N'CL03 ', N'EV02 ', N'DI02 ', N'EC02 ', N'TE03 ', N'T03  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT04 ', CAST(N'2021-04-14' AS Date), N'Elizabet Bustillo Torres', N'Oficina', N'Evelyn Veliz Cardozo', N'CL04 ', N'EV02 ', N'DI02 ', N'EC02 ', N'TE04 ', N'T02  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT05 ', CAST(N'2021-04-15' AS Date), N'Elizabet Bustillo Torres', N'Cafeteria', N'Isabel Apaza Vicente', N'CL05 ', N'EV03 ', N'DI03 ', N'EC02 ', N'TE05 ', N'T01  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT06 ', CAST(N'2021-05-16' AS Date), N'Camila Ramirez Perez', N'Oficina', N'Deymar Copa Medrano', N'CL06 ', N'EV03 ', N'DI03 ', N'EC03 ', N'TE01 ', N'T05  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT07 ', CAST(N'2021-05-17' AS Date), N'Camila Ramirez Perez', N'Cafeteria', N'Elena Antezana Cardenal', N'CL07 ', N'EV04 ', N'DI04 ', N'EC03 ', N'TE02 ', N'T04  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT08 ', CAST(N'2021-06-18' AS Date), N'Estefania Manrique Quevedo', N'Restaurante', N'Maria Antonio Mamani', N'CL08 ', N'EV04 ', N'DI04 ', N'EC04 ', N'TE03 ', N'T03  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT09 ', CAST(N'2021-06-19' AS Date), N'Estefania Manrique Quevedo', N'Oficina', N'Aria Velazques Salas', N'CL09 ', N'EV05 ', N'DI05 ', N'EC04 ', N'TE04 ', N'T02  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT10 ', CAST(N'2022-06-18' AS Date), N'Sali Mendrano Llanos', N'Cafeteria', N'Mario Luna Carrillo', N'CL10 ', N'EV05 ', N'DI05 ', N'EC05 ', N'TE05 ', N'T01  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT11 ', CAST(N'2022-07-17' AS Date), N'Sali Mendrano Llanos', N'Oficina', N'Luis Vazques Carrasco', N'CL11 ', N'EV06 ', N'DI06 ', N'EC05 ', N'TE06 ', N'T06  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT12 ', CAST(N'2022-07-16' AS Date), N'Sali Mendrano Llanos', N'Restaurante', N'Marcos Salsedo Carrion', N'CL12 ', N'EV06 ', N'DI06 ', N'EC05 ', N'TE07 ', N'T07  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT13 ', CAST(N'2022-07-15' AS Date), N'Estefania Aguirre Manrique', N'Restaurante', N'Angela Salsero Mamani', N'CL13 ', N'EV07 ', N'DI07 ', N'EC06 ', N'TE08 ', N'T08  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT14 ', CAST(N'2022-08-14' AS Date), N'Estefania Aguirre Manrique', N'Oficina', N'Patricia Montoya Lucuy', N'CL14 ', N'EV07 ', N'DI07 ', N'EC06 ', N'TE09 ', N'T09  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT15 ', CAST(N'2022-08-13' AS Date), N'Sonia Casa Lobos', N'Cafeteria', N'Carlos Moto Luna', N'CL15 ', N'EV08 ', N'DI08 ', N'EC08 ', N'TE10 ', N'T10  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT16 ', CAST(N'2022-08-12' AS Date), N'Sonia Casa Lobos', N'Restaurante', N'Tania Caquegua Huarachi', N'CL16 ', N'EV08 ', N'DI08 ', N'EC08 ', N'TE06 ', N'T06  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT17 ', CAST(N'2022-08-11' AS Date), N'Sonia Casa Lobos', N'Restaurante', N'Andrea Chavarria Olivares', N'CL17 ', N'EV09 ', N'DI09 ', N'EC08 ', N'TE07 ', N'T07  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT18 ', CAST(N'2022-09-10' AS Date), N'Pamela Hacienda Flores', N'Restaurante', N'Yanina Choque Condori', N'CL18 ', N'EV09 ', N'DI09 ', N'EC09 ', N'TE08 ', N'T08  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT19 ', CAST(N'2022-09-09' AS Date), N'Pamela Hacienda Flores', N'Restaurante', N'Deysi Choque Quispe', N'CL19 ', N'EV10 ', N'DI10 ', N'EC09 ', N'TE09 ', N'T09  ')&#xA;GO&#xA;INSERT [dbo].[Citas] ([Cod_Citas], [Fecha_cita], [Nom_Encargado], [Lugar_atencion], [Nom_Cliente], [Cod_Cliente], [Cod_Evento], [Cod_Distrito], [Cod_Encargado], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'CT20 ', CAST(N'2022-10-08' AS Date), N'Lucia Manrique Llanos', N'Restaurante', N'Carmen Coca Luna', N'CL20 ', N'EV10 ', N'DI10 ', N'EC10 ', N'TE10 ', N'T10  ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL01 ', N'Ronaldo Tito Nogales', N'9912301  ', N'76541221', N'Calle lincon #123', N'Usuario1@gmail.com', N'D01  ', N'PR01 ', N'DI01 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL02 ', N'Griselda Valdez Choque', N'9912302  ', N'76541222', N'Av. La Paz #234', N'Usuario2@gmail.com', N'D01  ', N'PR01 ', N'DI01 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL03 ', N'Jaquelin Velazquez Aroni', N'9912303  ', N'76541223', N'Calle Central Paris #122', N'Usuario3@gmail.com', N'D02  ', N'PR02 ', N'DI02 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL04 ', N'Evelyn Veliz Cardozo', N'9912304  ', N'76541224', N'Calle Mario Davalo #332', N'Usuario4@gmail.com', N'D02  ', N'PR02 ', N'DI02 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL05 ', N'Isabel Apaza Vicente', N'9912305  ', N'76541225', N'Calle Jorge linares #120', N'Usuario5@gmail.com', N'D03  ', N'PR03 ', N'DI03 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL06 ', N'Deymar Copa Medrano', N'9912306  ', N'76541226', N'Av Sucre Central #111', N'Usuario6@gmail.com', N'D03  ', N'PR03 ', N'DI03 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL07 ', N'Elena Antezana Cardenal', N'9912307  ', N'76541227', N'Calle Carlo Palacios #330', N'Usuario7@gmail.com', N'D04  ', N'PR04 ', N'DI04 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL08 ', N'Maria Antonio Mamani', N'9912308  ', N'76541228', N'Calle Sesamo Davals #887', N'Usuario8@gmail.com', N'D04  ', N'PR04 ', N'DI04 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL09 ', N'Aria Velazques Salas', N'9912309  ', N'76541229', N'Calle Palacios Monte #876', N'Usuario9@gmail.com', N'D05  ', N'PR05 ', N'DI05 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL10 ', N'Mario Luna Carrillo', N'9912310  ', N'76541230', N'Av linares #170', N'Usuario10@gmail.com', N'D05  ', N'PR05 ', N'DI05 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL11 ', N'Luis Vazques Carrasco', N'9912311  ', N'76541231', N'Av Carrillo Lopez #171', N'Usuario11@gmail.com', N'D06  ', N'PR06 ', N'DI06 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL12 ', N'Marcos Salsedo Carrion', N'9912312  ', N'76541232', N'Av Bolivia #172', N'Usuario12@gmail.com', N'D06  ', N'PR06 ', N'DI06 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL13 ', N'Angela Salsero Mamani', N'9912313  ', N'76541233', N'Av Sucre #173', N'Usuario13@gmail.com', N'D07  ', N'PR07 ', N'DI07 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL14 ', N'Patricia Montoya Lucuy', N'9912314  ', N'76541234', N'Av Aspiazu #174', N'Usuario14@gmail.com', N'D07  ', N'PR07 ', N'DI07 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL15 ', N'Carlos Moto Luna', N'9912315  ', N'76541235', N'Av Barrio Nuevo #175', N'Usuario15@gmail.com', N'D08  ', N'PR08 ', N'DI08 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL16 ', N'Tania Caquegua Huarachi', N'9912316  ', N'76541236', N'Av Barrio Sur #117', N'Usuario16@gmail.com', N'D08  ', N'PR08 ', N'DI08 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL17 ', N'Andrea Chavarria Olivares', N'9912317  ', N'76541237', N'Av Barrio Norte #118', N'Usuario17@gmail.com', N'D09  ', N'PR09 ', N'DI09 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL18 ', N'Yanina Choque Condori', N'9912318  ', N'76541238', N'Av Barrio Este #119', N'Usuario18@gmail.com', N'D09  ', N'PR09 ', N'DI09 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL19 ', N'Deysi Choque Quispe', N'9912319  ', N'76541239', N'Av Barrio Oeste #121', N'Usuario19@gmail.com', N'D10  ', N'PR10 ', N'DI10 ')&#xA;GO&#xA;INSERT [dbo].[Cliente] ([Cod_Cliente], [Nom_Cliente], [CI], [Telefono], [Direccion], [Correo], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'CL20 ', N'Carmen Coca Luna', N'9912320  ', N'76541240', N'Av Sargento #122', N'Usuario20@gmail.com', N'D10  ', N'PR10 ', N'DI10 ')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D01  ', N'La Paz')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D02  ', N'Oruro')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D03  ', N'Santa Cruz')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D04  ', N'Potosi')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D05  ', N'Cochabamba')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D06  ', N'Tarija')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D07  ', N'Beni')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D08  ', N'Pando')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D09  ', N'Sucre')&#xA;GO&#xA;INSERT [dbo].[Departamento] ([Cod_Departamento], [Nom_Deparatamento]) VALUES (N'D10  ', N'Chuquisaca')&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT01 ', N'EV01 ', 1200.0000, 50)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT02 ', N'EV01 ', 1250.0000, 60)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT03 ', N'EV02 ', 1240.0000, 70)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT04 ', N'EV02 ', 1110.0000, 80)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT05 ', N'EV03 ', 1500.0000, 50)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT06 ', N'EV03 ', 1320.0000, 40)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT07 ', N'EV04 ', 1450.0000, 50)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT08 ', N'EV04 ', 1230.0000, 60)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT09 ', N'EV05 ', 1430.0000, 70)&#xA;GO&#xA;INSERT [dbo].[Detalle_Cita] ([Cod_Citas], [Cod_Evento], [costo_evento], [cantidad]) VALUES (N'CT10 ', N'EV05 ', 1320.0000, 80)&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI01 ', N'Los Limos', N'PR01 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI02 ', N'Barrientos', N'PR02 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI03 ', N'Cañada', N'PR03 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI04 ', N'Tumavi', N'PR04 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI05 ', N'El Carmen', N'PR05 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI06 ', N'Taruma', N'PR06 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI07 ', N'Villa Florida', N'PR07 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI08 ', N'Angostura', N'PR08 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI09 ', N'San Pedro', N'PR09 ')&#xA;GO&#xA;INSERT [dbo].[Distrito] ([Cod_Distrito], [Nom_Distrito], [Cod_Provincia]) VALUES (N'DI10 ', N'El Cafetal', N'PR10 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC01 ', N'Carla Llanos Paredes', N'09:30 a 11:45', N'D01  ', N'PR01 ', N'DI01 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC02 ', N'Elizabet Bustillo Torres', N'15:30 a 18:00', N'D02  ', N'PR02 ', N'DI02 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC03 ', N'Camila Ramirez Perez', N'15:30 a 18:00', N'D03  ', N'PR03 ', N'DI03 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC04 ', N'Estefania Manrique Quevedo', N'09:30 a 11:45', N'D04  ', N'PR04 ', N'DI04 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC05 ', N'Sali Mendrano Llanos', N'15:30 a 18:00', N'D05  ', N'PR05 ', N'DI05 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC06 ', N'Estefania Aguirre Manrique', N'09:30 a 11:45', N'D06  ', N'PR06 ', N'DI06 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC07 ', N'Sonia Casa Lobos', N'15:30 a 18:00', N'D07  ', N'PR07 ', N'DI07 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC08 ', N'Pamela Hacienda Flores', N'15:30 a 18:00', N'D08  ', N'PR08 ', N'DI08 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC09 ', N'Lucia Manrique Llanos', N'09:30 a 11:45', N'D09  ', N'PR09 ', N'DI09 ')&#xA;GO&#xA;INSERT [dbo].[Encargado] ([Cod_Encargado], [Nom_Encargado], [Horario], [Cod_Departamento], [Cod_Provincia], [Cod_Distrito]) VALUES (N'EC10 ', N'Angela Mamani Ramos', N'15:30 a 18:00', N'D10  ', N'PR10 ', N'DI10 ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV01 ', CAST(N'2020-02-02' AS Date), N'Av Sucre #173', 700.0000, N'Jardin', N'CL01 ', N'TE01 ', N'T01  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV02 ', CAST(N'2020-03-03' AS Date), N'Av Sucre #173', 600.0000, N'Jardin Amplio', N'CL01 ', N'TE01 ', N'T01  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV03 ', CAST(N'2020-04-04' AS Date), N'Av Sucre #173', 550.0000, N'Jardin', N'CL03 ', N'TE02 ', N'T02  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV04 ', CAST(N'2021-05-05' AS Date), N'Av Sucre #173', 600.0000, N'Jardin', N'CL04 ', N'TE02 ', N'T03  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV05 ', CAST(N'2021-06-06' AS Date), N'Av Sucre #173', 700.0000, N'Jardin Valle', N'CL03 ', N'TE01 ', N'T04  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV06 ', CAST(N'2021-07-07' AS Date), N'Av Sucre #173', 800.0000, N'Jardin', N'CL06 ', N'TE04 ', N'T05  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV07 ', CAST(N'2022-08-08' AS Date), N'Av Sucre #173', 650.0000, N'Jardin Amplio', N'CL03 ', N'TE01 ', N'T06  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV08 ', CAST(N'2022-09-09' AS Date), N'Av Sucre #173', 600.0000, N'Jardin', N'CL08 ', N'TE03 ', N'T07  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV09 ', CAST(N'2022-09-10' AS Date), N'Av Sucre #173', 800.0000, N'Jardin', N'CL09 ', N'TE05 ', N'T08  ')&#xA;GO&#xA;INSERT [dbo].[evento] ([Cod_Evento], [Fecha_evento], [ubicacion_evento], [costo_evento], [tipo_local], [Cod_Cliente], [Cod_TipoEvento], [Cod_Tematicas]) VALUES (N'EV10 ', CAST(N'2022-08-11' AS Date), N'Av Sucre #173', 1000.0000, N'Jardin Valle', N'CL10 ', N'TE06 ', N'T09  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR01 ', N'Larecaja', N'D01  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR02 ', N'Cercado', N'D02  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR03 ', N'Vallegrande', N'D03  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR04 ', N'Antonio Quijarro', N'D04  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR05 ', N'Capinota', N'D05  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR06 ', N'Gran Chaco', N'D06  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR07 ', N'Yacuma', N'D07  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR08 ', N'Manuripi', N'D08  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR09 ', N'Belisario Boeto', N'D09  ')&#xA;GO&#xA;INSERT [dbo].[Provincia] ([Cod_Provincia], [Nom_Provincia], [Cod_Departamento]) VALUES (N'PR10 ', N'Zudañes', N'D10  ')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T01  ', N'Egipcio')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T02  ', N'Arabe')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T03  ', N'Canadiense')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T04  ', N'Coreano')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T05  ', N'Tropical')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T06  ', N'Hawaiana')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T07  ', N'Neon')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T08  ', N'Ibicenca')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T09  ', N'De los años 20')&#xA;GO&#xA;INSERT [dbo].[Tematicas] ([Cod_Tematicas], [Nom_Tematica]) VALUES (N'T10  ', N'Turcas')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE01 ', N'Aniversario')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE02 ', N'Bautizo')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE03 ', N'Boda')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE04 ', N'Graduacion')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE05 ', N'Quinceaños')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE06 ', N'Fin de Año')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE07 ', N'Despedida de Soltero')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE08 ', N'Reencuentro')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE09 ', N'Privada')&#xA;GO&#xA;INSERT [dbo].[Tipos_Evento] ([Cod_TipoEvento], [Nom_TipoEvento]) VALUES (N'TE10 ', N'Infantiles')&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:From="Package\Tarea Ejecutar Consulta SQL"
+      DTS:To="Package\Tarea Crear Tablas SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:DTSID="{A998E6ED-2A9A-4720-BCEA-70E94AC88178}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:From="Package\Tarea Crear Tablas SQL"
+      DTS:To="Package\Tarea Insercion Datos SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:DTSID="{A15D8D5D-94AB-4A3E-8BCE-8BFC39F91C61}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:From="Package\Tarea Insercion Datos SQL"
+      DTS:To="Package\Tarea Cargue Archivo Texto"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:DTSID="{8E89087A-DA09-4FC9-990B-A6BF8DD0FCB8}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="sql11">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Tarea Ejecutar Consulta SQL"
+          TopLeft="86,55" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Tarea Crear Tablas SQL"
+          TopLeft="221,134" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="192.5,97">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.5,37"
+              Start="0,0"
+              End="123.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="119.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.5,18.5"
+                    Point2="123.5,18.5"
+                    Point3="123.5,22.5" />
+                  <mssgle:LineSegment
+                    End="123.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Tarea Insercion Datos SQL"
+          TopLeft="404,210" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="316,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="190,34"
+              Start="0,0"
+              End="190,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="186,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="186,17"
+                    Point2="190,17"
+                    Point3="190,21" />
+                  <mssgle:LineSegment
+                    End="190,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Tarea Cargue Archivo Texto"
+          TopLeft="539,277" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="506,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137.5,25"
+              Start="0,0"
+              End="137.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="133.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.5,12.5"
+                    Point2="137.5,12.5"
+                    Point3="137.5,16.5" />
+                  <mssgle:LineSegment
+                    End="137.5,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Cargue Archivo Texto">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Tarea Cargue Archivo Texto\Origen de archivo plano"
+          TopLeft="134,83" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Tarea Cargue Archivo Texto\Destino de OLE DB"
+          TopLeft="433,85" />
+        <EdgeLayout
+          Id="Package\Tarea Cargue Archivo Texto.Paths[Salida de origen de archivo plano]"
+          TopLeft="324,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109,0"
+              Start="0,0"
+              End="101.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="101.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Cargue Archivo Texto\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
